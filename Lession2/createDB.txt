@@ -1,0 +1,20 @@
+use myDB;
+
+db.myCollection.find();
+db.myCollection.insert({name : "Harmish", score  : 9});
+db.myCollection.find();
+
+db.myCollection.insert([
+	{name : "Robin", score  : 10},
+	{name : "Mayur", score  : 11},
+	{name : "Prashant", score  : 12}
+]);
+
+db.myCollection.find();
+
+db.breakfast.insert([
+	{name : "Cha Bhakhri", type : "veg"},
+	{name : "Omlet", type  : "egg"}
+]);
+
+db.breakfast.find();
