@@ -1,0 +1,40 @@
+use myDB;
+
+//Update one entry
+db.myCollection.find({name : "Harmish"});
+db.myCollection.update({name : "Harmish"},
+					   {$set : {name : "Hcl", surname : "Lakhani"},
+					   $inc : {score : 22}});
+db.myCollection.find();
+
+//Update first
+db.myCollection.update({}, {$inc : {score : -5}});
+db.myCollection.find();
+
+//Update multiple
+db.myCollection.update({score : {$gt : 5}}, {$inc : {score : -5}}, {multi : true});
+db.myCollection.find();
+
+//Save
+var doc = db.myCollection.findOne({name : "Hcl"});
+doc
+doc.score = 50;
+db.myCollection.save(doc);
+db.myCollection.find();
+
+//Remove documents
+db.myCollection.remove({name : "Mayur"});
+db.myCollection.find();
+db.myCollection.remove();
+db.myCollection.find();
+
+//Drop collections
+show collections;
+db.myCollection.drop();
+show collections;
+
+//Drop database
+show dbs;
+use myDB;
+db.dropDatabase();
+show dbs;

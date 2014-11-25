@@ -1,0 +1,34 @@
+//create admin accounts
+use admin;
+
+db.addUser( {
+		user : "dbadmin",
+		pwd : "test",
+		roles : [ "readWriteAnyDatabase", "dbAdminAnyDatabase", "clusterAdmin"]	
+});
+
+db.addUser( {
+		user : "useradmin",
+		pwd : "test",
+		roles : ["userAdminAnyDatabase"]	
+});
+
+//create user account
+use test;
+
+db.addUser( {
+		user : "testReader",
+		pwd : "test",
+		roles : [ "read" ]	
+});
+
+db.addUser( {
+		user : "testWriter",
+		pwd : "test",
+		roles : ["readWrite"]	
+});
+
+//Shutdown and restart monodb with authentication
+use admin;
+db.shutdownServer();
+mongod -dbpath C:\dev\MongoDB\data\db --auth
