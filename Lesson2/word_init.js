@@ -1,7 +1,7 @@
 var vowelArr = "aeiou";
 var consenantArr = "bcdfghjklmnpqrstvwxyz";
 var words = "Aren't, Harmish, Lakhani, HCL, anonynmous, mcafee, google, reshma, bboying";
-var wordArr = words.split(",");
+var wordArr = words.split(", ");
 var wordObjArr = [];
 
 //Build objects
