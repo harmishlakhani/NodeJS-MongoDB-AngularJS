@@ -20,3 +20,8 @@ Installation ::
         mongo
   
   That's it for MongoDB.
+  
+Resources ::
+  * http://nodetuts.com/01-node_intro.html
+  * http://stackoverflow.com/questions/8144214/learning-express-for-node-js
+  * https://github.com/bwdbooks/nodejs-mongodb-angularjs-web-development
