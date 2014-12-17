@@ -1,0 +1,25 @@
+@CHARSET "ISO-8859-1";
+
+div {
+	padding: 5px;
+	font: 18px bold;
+}
+
+span {
+	padding: 5px;
+	margin: 12px;
+	border: 5px ridge;
+	cursor: pointer;
+	color: white;
+	background-color: blue;
+}
+
+label {
+	padding: 2px;
+	font: 15px bold;
+	margin: 5px;
+}
+
+p {
+	margin: 15px 22px;
+}
